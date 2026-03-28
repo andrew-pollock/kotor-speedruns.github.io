@@ -36,7 +36,7 @@ async function get_record(uri, tr) {
     
     run = response['data']['runs'][0]['run'];
 
-    player_uri = run['players'][0]['uri'];
+    player_uri = run['players'][0]['uri'].replace("http://", "https://");
     LRT = run['times']['realtime_noloads_t'];
     RTA = run['times']['realtime_t'];
     link = run['weblink'];
